@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAYER:01 — SAIDA.DEV</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Noise canvas (CRT grain) -->
+  <canvas id="noise"></canvas>
+
+  <!-- Custom crosshair cursor -->
+  <div id="cur"></div>
+
+  <!-- Animated wired background lines -->
+  <div class="wbg" id="wbg"></div>
+
+  <!-- ════════════════════════════════════
+       NAV
+  ═════════════════════════════════════ -->
+  <nav>
+    <div class="nav-id">SAIDA<span>://</span>DEV</div>
+    <ul class="nav-links">
+      <li><a href="#about">PROFIL</a></li>
+      <li><a href="#skills">STACK</a></li>
+      <li><a href="#projects">PROJETS</a></li>
+      <li><a href="#experience">EXPÉRIENCE</a></li>
+      <li><a href="#contact">CONNECT</a></li>
+    </ul>
+    <div class="nav-st">
+      <div class="blink"></div>
+      <span>WIRED_ONLINE</span>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════
+       HERO — LAYER_01
+  ═════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-left">
+
+      <!-- Boot log -->
+      <div class="sys-log">
+        <div>[ <span class="ok">OK</span> ] BOOT LAYER_01 — SAIDA.DEV</div>
+        <div>[ <span class="ok">OK</span> ] NAVI CONNECTED — MARSEILLE_NODE</div>
+        <div>[ <span class="warn">!!</span> ] FORMATION EN COURS — ENSITECH 2026/27</div>
+        <div>[ <span class="ok">OK</span> ] ALTERNANCE_SEARCH.EXE ACTIF</div>
+        <div>[ <span class="ok">OK</span> ] RYTHME: 2J ÉCOLE / 3J ENTREPRISE</div>
+      </div>
+
+      <!-- Availability badge -->
+      <div class="hero-tag">
+        <span class="dot"></span>
+        DISPONIBLE EN ALTERNANCE — RYTHME 2/3
+      </div>
+
+      <!-- Main title -->
+      <div class="hero-title-row">
+  <h1 class="hero-title">
+    <span class="gl" data-text="DEV">DEV</span>
+    <span class="gl" data-text="FULL">FULL</span>
+    <span class="gl" data-text="STACK">STACK</span>
+    <span class="sub">// MARSEILLE — EN RECONVERSION</span>
+  </h1>
+  <div class="bear-circle">
+    <img src="CV dev.png" alt="Profil" class="bear-photo">
+  </div>
+</div>
+
+<div class="hero-desc">
+         Bienvenue dans mon espace numérique.  
+Je conçois des expériences mêlant <strong>design</strong>, <strong>code</strong> et <strong>narration</strong>.  
+Actuellement en <strong>Bachelor 3 Développement</strong> chez Ensitech, je suis à la recherche d’une <strong>alternance en développement full‑stack</strong> pour continuer à évoluer dans un environnement technique exigeant.
+
+Passionnée par la technologie depuis l’enfance, j’ai toujours vu le web comme un terrain d’expérimentation créatif.  
+L’esthétique de ce site s’inspire directement de l’univers culte de <strong>Serial Experiments Lain</strong> — un hommage à cette vision hybride où le numérique, l’identité et la perception se mélangent.
+      </div>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn">ACCESS_LOG</a>
+        <a href="#contact"  class="btn g">CONNECT</a>
+      </div>
+    </div>
+
+    <!-- NAVI terminal panel -->
+    <div class="hero-right">
+      <div style="position:relative; width:300px; height:380px;">
+        <div class="navi-box" style="width:100%; height:100%;">
+          <div class="navi-hdr">
+            <span>NAVI://RYTHMA</span>
+            <span style="color:var(--crt)">●</span>
+          </div>
+          <div class="navi-body">
+            <div class="tl"><span class="tp">root@wired:~$</span>&nbsp;<span class="tc">cat profile.json</span></div>
+            <div class="tl"><span class="to">{</span></div>
+            <div class="tl"><span class="to">&nbsp;"nom": "Saida",</span></div>
+            <div class="tl"><span class="to">&nbsp;"role": "Fullstack Dev",</span></div>
+            <div class="tl"><span class="to">&nbsp;"ecole": "Ensitech",</span></div>
+            <div class="tl"><span class="to">&nbsp;"ville": "Marseille",</span></div>
+            <div class="tl"><span class="to">&nbsp;"langues": 5,</span></div>
+            <div class="tl"><span class="to">&nbsp;"alternance": true,</span></div>
+            <div class="tl"><span class="to">&nbsp;"wired": true</span></div>
+            <div class="tl"><span class="to">}</span></div>
+            <div class="tl" style="margin-top:.4rem">
+              <span class="tp">root@wired:~$</span>&nbsp;<span class="tcar"></span>
+            </div>
+          </div>
+          <span class="navi-corn tl_">SYS:01</span>
+          <span class="navi-corn tr_">ACTIVE</span>
+          <span class="navi-corn bl_">LAYER_01</span>
+          <span class="navi-corn br_">◈</span>
+        </div>
+
+        <!-- Connection nodes -->
+        <div class="c-node" style="top:15%; left:-4%;  animation-delay:0s"></div>
+        <div class="c-node" style="top:55%; left:-5%;  animation-delay:.6s"></div>
+        <div class="c-node" style="top:85%; left:-3%;  animation-delay:1.2s"></div>
+        <div class="c-node" style="top:8%;  right:-4%; animation-delay:.3s"></div>
+        <div class="c-node" style="top:65%; right:-5%; animation-delay:.9s"></div>
+
+        <div class="side-txt">SERIAL_EXPERIMENTS // SAIDA // LAYER_01</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       ABOUT — LAYER_02
+  ═════════════════════════════════════ -->
+  <section id="about">
+    <div class="sec-inner">
+      <div class="sec-hdr">
+        <span class="sec-num">LAYER_02</span>
+        <h2 class="sec-ttl glitch" data-text="PROFILE.EXE">PROFILE.EXE</h2>
+        <div class="sec-rule"></div>
+        <span class="sec-tag">QUI_SUIS_JE</span>
+      </div>
+
+      <div class="about-grid">
+
+        <!-- Left: bio + stats + formation -->
+        <div>
+          <div class="about-text reveal">
+            <p>En <strong>reconversion vers le développement Fullstack</strong>, je rejoins la réalité du wired
+            après un parcours riche et atypique. MBA Marketing, Langues Étrangères Appliquées, passage par
+            l'école 42, formation Swift iOS… je construis ma stack layer par layer.</p>
+            <p>Actuellement en <strong>Bachelor 3 à Ensitech Marseille</strong>, je cherche une alternance au
+            rythme <strong>2 jours école / 3 jours entreprise</strong>. Passionnée, polyvalente et curieuse —
+            j'apprends vite et je livre.</p>
+            <p>Mes expériences en RH, logistique, communication et immobilier me donnent une
+            <strong>vision transversale</strong>. Je comprends les besoins métier
+            autant que le code.</p>
+          </div>
+
+          <!-- Stats -->
+          <div class="stat-row">
+            <div class="stat-item reveal d1"><div class="s-num">5+</div><div class="s-lbl">LANGUES</div></div>
+            <div class="stat-item reveal d2"><div class="s-num">4+</div><div class="s-lbl">LANGAGES</div></div>
+            <div class="stat-item reveal d2"><div class="s-num">2/3</div><div class="s-lbl">RYTHME ALT.</div></div>
+            <div class="stat-item reveal d3"><div class="s-num">∞</div><div class="s-lbl">CURIOSITÉ</div></div>
+          </div>
+
+          <!-- Formation timeline -->
+          <div style="margin-top:2.5rem;">
+            <div class="sec-tag" style="display:block; margin-bottom:1rem;">FORMATION_LOG</div>
+            <div class="formation-list">
+              <div class="form-item reveal">
+                <div class="form-item-inner">
+                  <div class="form-year">2026 – 2027</div>
+                  <div class="form-name">Bachelor Fullstack Dev — Bac+3</div>
+                  <div class="form-place">Ensitech, Marseille — EN COURS</div>
+                </div>
+              </div>
+              <div class="form-item reveal d1">
+                <div class="form-item-inner">
+                  <div class="form-year">Juil. – Août 2025</div>
+                  <div class="form-name">Développement C & Algorithmique</div>
+                  <div class="form-place">École 42, Marseille</div>
+                </div>
+              </div>
+              <div class="form-item reveal d1">
+                <div class="form-item-inner">
+                  <div class="form-year">Fév. – Mars 2025</div>
+                  <div class="form-name">Dev Mobile Swift iOS</div>
+                  <div class="form-place">Simplon, Marseille 13002</div>
+                </div>
+              </div>
+              <div class="form-item reveal d2">
+                <div class="form-item-inner">
+                  <div class="form-year">2023</div>
+                  <div class="form-name">MBA Marketing & Stratégies</div>
+                  <div class="form-place">COMNICA STUDI</div>
+                </div>
+              </div>
+              <div class="form-item reveal d2">
+                <div class="form-item-inner">
+                  <div class="form-year">2021</div>
+                  <div class="form-name">Langues Étrangères Appliquées (LEA)</div>
+                  <div class="form-place">Université de Bourgogne, Dijon</div>
+                </div>
+              </div>
+              <div class="form-item reveal d3">
+                <div class="form-item-inner">
+                  <div class="form-year">2018</div>
+                  <div class="form-name">Baccalauréat Économique et Social</div>
+                  <div class="form-place">Lycée Les Haberges, Vesoul</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: terminal block -->
+        <div class="terminal-block reveal d1">
+          <div class="tl"><span class="tp">root@wired:~$</span>&nbsp;<span class="tc">./skills --all</span></div>
+          <div class="tl" style="margin-top:.3rem"><span class="to">// TECH STACK</span></div>
+          <div class="tl"><span class="tp">›</span>&nbsp;<span class="to">Python, JavaScript, Swift, C</span></div>
+          <div class="tl"><span class="tp">›</span>&nbsp;<span class="to">HTML, CSS, SQL</span></div>
+          <div class="tl"><span class="tp">›</span>&nbsp;<span class="to">Git, JIRA, GitLab, GitHub</span></div>
+          <br>
+          <div class="tl"><span class="to">// LANGUES</span></div>
+          <div class="tl"><span class="tp">›</span>&nbsp;<span class="to">Français — bilingue</span></div>
+          <div class="tl"><span class="tp">›</span>&nbsp;<span class="to">Albanais — natif</span></div>
+          <div class="tl"><span class="tp">›</span>&nbsp;<span class="to">Anglais — courant</span></div>
+          <div class="tl"><span class="tp">›</span>&nbsp;<span class="to">Espagnol — courant</span></div>
+          <div class="tl"><span class="tp">›</span>&nbsp;<span class="to">Néerlandais — courant</span></div>
+          <br>
+          <div class="tl"><span class="to">// SOFT SKILLS</span></div>
+          <div class="tl"><span class="tp">›</span>&nbsp;<span class="to">Adaptabilité, polyvalence</span></div>
+          <div class="tl"><span class="tp">›</span>&nbsp;<span class="to">Communication, gestion équipe</span></div>
+          <div class="tl"><span class="tp">›</span>&nbsp;<span class="to">Créativité, rigueur, initiative</span></div>
+          <br>
+          <div class="tl"><span class="tp">root@wired:~$</span>&nbsp;<span class="tcar"></span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       SKILLS — LAYER_03
+  ═════════════════════════════════════ -->
+  <section id="skills">
+    <div class="sec-inner">
+      <div class="sec-hdr">
+        <span class="sec-num">LAYER_03</span>
+        <h2 class="sec-ttl glitch" data-text="PROTOCOLS">PROTOCOLS</h2>
+        <div class="sec-rule"></div>
+        <span class="sec-tag">TECH_STACK</span>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-panel reveal">
+          <div class="sp-head"><span class="sp-ico">▶</span>FRONT_END</div>
+          <div class="sp-tags">
+            <span class="sp-tag">HTML5</span>
+            <span class="sp-tag">CSS3</span>
+            <span class="sp-tag">JavaScript</span>
+            <span class="sp-tag">WordPress</span>
+            <span class="sp-tag">SEO</span>
+            <span class="sp-tag">UX/UI</span>
+          </div>
+        </div>
+        <div class="skill-panel reveal d1">
+          <div class="sp-head"><span class="sp-ico">◈</span>BACK_END / SCRIPT</div>
+          <div class="sp-tags">
+            <span class="sp-tag">Python</span>
+            <span class="sp-tag">C</span>
+            <span class="sp-tag">Algorithmique</span>
+            <span class="sp-tag">SQL</span>
+            <span class="sp-tag">API REST</span>
+          </div>
+        </div>
+        <div class="skill-panel reveal d2">
+          <div class="sp-head"><span class="sp-ico">◆</span>MOBILE</div>
+          <div class="sp-tags">
+            <span class="sp-tag">Swift</span>
+            <span class="sp-tag">iOS</span>
+            <span class="sp-tag">Xcode</span>
+            <span class="sp-tag">UIKit</span>
+          </div>
+        </div>
+        <div class="skill-panel reveal">
+          <div class="sp-head"><span class="sp-ico">■</span>OUTILS DEV</div>
+          <div class="sp-tags">
+            <span class="sp-tag">Git</span>
+            <span class="sp-tag">GitHub</span>
+            <span class="sp-tag">GitLab</span>
+            <span class="sp-tag">JIRA</span>
+            <span class="sp-tag">VS Code</span>
+          </div>
+        </div>
+        <div class="skill-panel reveal d1">
+          <div class="sp-head"><span class="sp-ico">✦</span>DESIGN / COMM</div>
+          <div class="sp-tags">
+            <span class="sp-tag">Figma</span>
+            <span class="sp-tag">Photoshop</span>
+            <span class="sp-tag">InDesign</span>
+            <span class="sp-tag">Canva</span>
+            <span class="sp-tag">Premiere Pro</span>
+          </div>
+        </div>
+        <div class="skill-panel reveal d2">
+          <div class="sp-head"><span class="sp-ico">⬡</span>MÉTIER / ADMIN</div>
+          <div class="sp-tags">
+            <span class="sp-tag">CRM</span>
+            <span class="sp-tag">Facturation</span>
+            <span class="sp-tag">RH</span>
+            <span class="sp-tag">Logistique</span>
+            <span class="sp-tag">Rédaction</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       PROJECTS — LAYER_04
+  ═════════════════════════════════════ -->
+  <section id="projects">
+    <div class="sec-inner">
+      <div class="sec-hdr">
+        <span class="sec-num">LAYER_04</span>
+        <h2 class="sec-ttl glitch" data-text="ACCESS_LOG">ACCESS_LOG</h2>
+        <div class="sec-rule"></div>
+        <span class="sec-tag">PROJETS_RÉELS + PERSO</span>
+      </div>
+
+      <!-- Legend -->
+      <div style="display:flex; gap:1.5rem; margin-bottom:1.2rem; font-size:.62rem; flex-wrap:wrap;">
+        <span style="color:var(--crt2); display:flex; align-items:center; gap:.4rem;">
+          <span style="border:1px solid rgba(77,255,180,.3); padding:.1rem .4rem; background:rgba(77,255,180,.05);">RÉEL</span>
+          Projets déjà réalisés
+        </span>
+        <span style="color:var(--amber); display:flex; align-items:center; gap:.4rem;">
+          <span style="border:1px solid rgba(255,170,0,.3); padding:.1rem .4rem; background:rgba(255,170,0,.05);">+</span>
+          Projets personnels supplémentaires
+        </span>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- ── REAL PROJECTS ── -->
+        <div class="proj-card reveal">
+          <div class="proj-badge real">RÉEL</div>
+          <div class="proj-screen ps1"><div class="proj-glyph">◈</div></div>
+          <div class="proj-body">
+            <div class="proj-langs"><span class="proj-lang">Python</span></div>
+            <div class="proj-name">MBTI_ANIME_TEST</div>
+            <p class="proj-desc">Quiz de personnalité MBTI en Python. 20 questions A/B, calcul du type,
+            mapping vers un personnage d'animé (Lain, Light, L…). Dictionnaires, boucles, logique conditionnelle.</p>
+          </div>
+          <div class="proj-footer">
+            <a href="#" class="proj-link">⌥ SOURCE</a>
+          </div>
+        </div>
+
+        <div class="proj-card reveal d1">
+          <div class="proj-badge real">RÉEL</div>
+          <div class="proj-screen ps2"><div class="proj-glyph">⬡</div></div>
+          <div class="proj-body">
+            <div class="proj-langs">
+              <span class="proj-lang">WordPress</span>
+              <span class="proj-lang">JS</span>
+              <span class="proj-lang">SEO</span>
+            </div>
+            <div class="proj-name">SITE_3B_PRO</div>
+            <p class="proj-desc">Amélioration du site e-commerce de 3B Pro (Aubagne). Publication produits,
+            optimisation SEO, amélioration UX/UI et correction JS. Mission réelle en entreprise.</p>
+          </div>
+          <div class="proj-footer">
+            <a href="#" class="proj-link">↗ LIVE</a>
+          </div>
+        </div>
+
+        <div class="proj-card reveal d2">
+          <div class="proj-badge real">RÉEL</div>
+          <div class="proj-screen ps3"><div class="proj-glyph">■</div></div>
+          <div class="proj-body">
+            <div class="proj-langs">
+              <span class="proj-lang">Premiere Pro</span>
+              <span class="proj-lang">InDesign</span>
+              <span class="proj-lang">Canva</span>
+            </div>
+            <div class="proj-name">MISSION_LOCALE_COMM</div>
+            <p class="proj-desc">Campagnes de communication, affiches, gestion YouTube et réseaux sociaux
+            pour la Mission Locale de Marseille. Montage vidéo, création graphique, organisation d'événements.</p>
+          </div>
+          <div class="proj-footer">
+            <a href="#" class="proj-link">↗ VOIR</a>
+          </div>
+        </div>
+
+        <!-- ── PERSONAL PROJECTS ── -->
+        <div class="proj-card reveal">
+          <div class="proj-badge add">+</div>
+          <div class="proj-screen ps4"><div class="proj-glyph">◆</div></div>
+          <div class="proj-body">
+            <div class="proj-langs">
+              <span class="proj-lang">Swift</span>
+              <span class="proj-lang">iOS</span>
+              <span class="proj-lang">UIKit</span>
+            </div>
+            <div class="proj-name">NAVI_TODO_IOS</div>
+            <p class="proj-desc">Application iOS de gestion de tâches avec persistance locale. Interface épurée,
+            ajout/suppression/complétion, navigation UIKit. Réalisé lors de la formation Simplon Swift.</p>
+          </div>
+          <div class="proj-footer">
+            <a href="#" class="proj-link">⌥ SOURCE</a>
+          </div>
+        </div>
+
+        <div class="proj-card reveal d1">
+          <div class="proj-badge add">+</div>
+          <div class="proj-screen ps5"><div class="proj-glyph">✦</div></div>
+          <div class="proj-body">
+            <div class="proj-langs">
+              <span class="proj-lang">C</span>
+              <span class="proj-lang">Algorithmique</span>
+            </div>
+            <div class="proj-name">MINISHELL_42</div>
+            <p class="proj-desc">Implémentation d'un mini-shell en C à l'École 42. Parsing des commandes,
+            gestion des processus, redirections et pipes. Manipulation bas niveau, pointeurs, mémoire.</p>
+          </div>
+          <div class="proj-footer">
+            <a href="#" class="proj-link">⌥ SOURCE</a>
+          </div>
+        </div>
+
+        <div class="proj-card reveal d2">
+          <div class="proj-badge add">+</div>
+          <div class="proj-screen ps6"><div class="proj-glyph">⬟</div></div>
+          <div class="proj-body">
+            <div class="proj-langs">
+              <span class="proj-lang">HTML</span>
+              <span class="proj-lang">CSS</span>
+              <span class="proj-lang">JavaScript</span>
+            </div>
+            <div class="proj-name">WIRED_DASHBOARD</div>
+            <p class="proj-desc">Dashboard personnel de suivi d'alternance — planning, modules de formation,
+            compteur de jours. Interface thème terminal, 100% frontend vanilla.</p>
+          </div>
+          <div class="proj-footer">
+            <a href="#" class="proj-link">↗ LIVE</a>
+            <a href="#" class="proj-link">⌥ SOURCE</a>
+          </div>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="proj-badge add">+</div>
+          <div class="proj-screen ps7"><div class="proj-glyph">◉</div></div>
+          <div class="proj-body">
+            <div class="proj-langs">
+              <span class="proj-lang">Python</span>
+              <span class="proj-lang">Discord API</span>
+            </div>
+            <div class="proj-name">BOT_LAYER_DISCORD</div>
+            <p class="proj-desc">Bot Discord en Python pour automatiser des rappels de cours et partager les
+            ressources d'alternance. Commandes personnalisées, planificateur de tâches, réponses contextuelles.</p>
+          </div>
+          <div class="proj-footer">
+            <a href="#" class="proj-link">⌥ SOURCE</a>
+          </div>
+        </div>
+
+        <div class="proj-card reveal d1">
+          <div class="proj-badge add">+</div>
+          <div class="proj-screen ps8"><div class="proj-glyph">▣</div></div>
+          <div class="proj-body">
+            <div class="proj-langs">
+              <span class="proj-lang">Python</span>
+              <span class="proj-lang">BeautifulSoup</span>
+              <span class="proj-lang">SQL</span>
+            </div>
+            <div class="proj-name">JOB_SCRAPER</div>
+            <p class="proj-desc">Scraper Python qui collecte les offres d'alternance fullstack depuis plusieurs
+            sites, les stocke en base SQLite et envoie un récap email quotidien. Automatisé via cron.</p>
+          </div>
+          <div class="proj-footer">
+            <a href="#" class="proj-link">⌥ SOURCE</a>
+          </div>
+        </div>
+
+        <div class="proj-card reveal d2">
+          <div class="proj-badge add">+</div>
+          <div class="proj-screen ps1" style="background:linear-gradient(135deg,#080d06,#12200f);">
+            <div class="proj-glyph" style="color:#8bff6a;">◎</div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-langs">
+              <span class="proj-lang">HTML</span>
+              <span class="proj-lang">CSS</span>
+              <span class="proj-lang">JS</span>
+            </div>
+            <div class="proj-name">PORTFOLIO_V1</div>
+            <p class="proj-desc">Ce portfolio. Univers Serial Experiments Lain — CRT scanlines, noise canvas,
+            glitch typographique, animations CSS, curseur custom. Entièrement hand-coded, zéro framework.</p>
+          </div>
+          <div class="proj-footer">
+            <a href="#" class="proj-link">↗ LIVE</a>
+            <a href="#" class="proj-link">⌥ SOURCE</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       EXPERIENCE — LAYER_05
+  ═════════════════════════════════════ -->
+  <section id="experience">
+    <div class="sec-inner">
+      <div class="sec-hdr">
+        <span class="sec-num">LAYER_05</span>
+        <h2 class="sec-ttl glitch" data-text="WORK_LOG">WORK_LOG</h2>
+        <div class="sec-rule"></div>
+        <span class="sec-tag">EXPÉRIENCES</span>
+      </div>
+
+      <div class="exp-grid">
+
+        <!-- Column 1 -->
+        <div>
+          <div class="exp-item reveal">
+            <div class="exp-period">Sept. 2025 — Fév. 2026</div>
+            <div class="exp-title">ASSISTANTE EXPLOITATION LOGISTIQUE</div>
+            <div class="exp-company">NOSAO — MIN de Marseille</div>
+            <ul class="exp-list">
+              <li>Facturation sous contrôle de la Directrice</li>
+              <li>Déclarations sorties palettes IPP & IFCO</li>
+              <li>Récapitulatifs emails des chargements journaliers</li>
+            </ul>
+          </div>
+          <div class="exp-item reveal d1">
+            <div class="exp-period">Août — Sept. 2025</div>
+            <div class="exp-title">ASSISTANTE IMMOBILIÈRE</div>
+            <div class="exp-company">Century 21 — Aubagne</div>
+            <ul class="exp-list">
+              <li>Suivi mails & plannings de visites</li>
+              <li>Dossiers administratifs et juridiques</li>
+              <li>Accueil client & rédaction de documents</li>
+            </ul>
+          </div>
+          <div class="exp-item reveal d2">
+            <div class="exp-period">Avr. — Juil. 2025</div>
+            <div class="exp-title">ATTACHÉE DE DIRECTION</div>
+            <div class="exp-company">3B Pro — Aubagne</div>
+            <ul class="exp-list">
+              <li>Amélioration site web & SEO (JS, WordPress)</li>
+              <li>Gestion achats, logistique, devis CRM</li>
+              <li>Conception marquages textile et objets</li>
+            </ul>
+          </div>
+          <div class="exp-item reveal">
+            <div class="exp-period">Août — Nov. 2024</div>
+            <div class="exp-title">CHARGÉE RH & EXPLOITATION</div>
+            <div class="exp-company">Mondial Relay — Aubagne</div>
+            <ul class="exp-list">
+              <li>Contrats de travail & saisie des heures</li>
+              <li>Recrutement & gestion employés</li>
+              <li>Gestion organisation site</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div>
+          <div class="exp-item reveal">
+            <div class="exp-period">Août — Déc. 2024</div>
+            <div class="exp-title">CHARGÉE D'EXPLOITATION</div>
+            <div class="exp-company">Heppner (Airbus) — Vitrolles</div>
+            <ul class="exp-list">
+              <li>Tâches administratives quotidiennes</li>
+              <li>Coordination communications internes/externes</li>
+              <li>Suivi dossiers clients</li>
+            </ul>
+          </div>
+          <div class="exp-item reveal d1">
+            <div class="exp-period">Mai — Juil. 2024</div>
+            <div class="exp-title">COMMERCIALE</div>
+            <div class="exp-company">Journal La Provence — Marseille</div>
+            <ul class="exp-list">
+              <li>Prospection nouveaux clients</li>
+              <li>Conseil & gestion des commandes</li>
+              <li>Atteinte objectifs de vente mensuels</li>
+            </ul>
+          </div>
+          <div class="exp-item reveal d2">
+            <div class="exp-period">Juin 2024</div>
+            <div class="exp-title">CHARGÉE DE COMMUNICATION</div>
+            <div class="exp-company">Mission Locale — Marseille</div>
+            <ul class="exp-list">
+              <li>Campagnes comm., affiches, logos</li>
+              <li>Gestion YouTube & réseaux sociaux</li>
+              <li>Montage vidéo (Adobe Premiere Pro)</li>
+            </ul>
+          </div>
+          <div class="exp-item reveal d3">
+            <div class="exp-period">Fév. 2023 — Mars 2024</div>
+            <div class="exp-title">GESTIONNAIRE</div>
+            <div class="exp-company">5àSec — Marseille</div>
+            <ul class="exp-list">
+              <li>Gestion managériale & résolution problèmes</li>
+              <li>Délégation & feedbacks équipe</li>
+              <li>Planification & budgétisation</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       LANGUES — LAYER_06
+  ═════════════════════════════════════ -->
+  <section id="langues">
+    <div class="sec-inner">
+      <div class="sec-hdr">
+        <span class="sec-num">LAYER_06</span>
+        <h2 class="sec-ttl glitch" data-text="LANGUAGES">LANGUAGES</h2>
+        <div class="sec-rule"></div>
+        <span class="sec-tag">MULTILINGUAL_NODE</span>
+      </div>
+      <div class="lang-grid">
+        <div class="lang-card reveal">
+          <div class="lang-flag">🇫🇷</div>
+          <div class="lang-name">FRANÇAIS</div>
+          <div class="lang-lvl">BILINGUE</div>
+        </div>
+        <div class="lang-card reveal d1">
+          <div class="lang-flag">🇦🇱</div>
+          <div class="lang-name">ALBANAIS</div>
+          <div class="lang-lvl">NATIF</div>
+        </div>
+        <div class="lang-card reveal d2">
+          <div class="lang-flag">🇬🇧</div>
+          <div class="lang-name">ANGLAIS</div>
+          <div class="lang-lvl">COURANT</div>
+        </div>
+        <div class="lang-card reveal d3">
+          <div class="lang-flag">🇪🇸</div>
+          <div class="lang-name">ESPAGNOL</div>
+          <div class="lang-lvl">COURANT</div>
+        </div>
+        <div class="lang-card reveal d3" style="grid-column: 2 / 4;">
+          <div class="lang-flag">🇳🇱</div>
+          <div class="lang-name">NÉERLANDAIS</div>
+          <div class="lang-lvl">COURANT</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       CONTACT — LAYER_07
+  ═════════════════════════════════════ -->
+  <section id="contact">
+    <div class="sec-inner">
+      <div class="sec-hdr">
+        <span class="sec-num">LAYER_07</span>
+        <h2 class="sec-ttl glitch" data-text="CONNECT.EXE">CONNECT.EXE</h2>
+        <div class="sec-rule"></div>
+        <span class="sec-tag">INIT_HANDSHAKE</span>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Info + links -->
+        <div class="contact-left reveal">
+          <p>Tu cherches une alternante <strong>Fullstack Dev</strong> au rythme 2j/3j ?
+          Je suis disponible et basée à Marseille. Envoie le signal — je réponds sous 24h.</p>
+          <div class="contact-links">
+            <a href="mailto:saidakc70@icloud.com" class="c-link">
+              <span class="c-ico">✉</span>saidakc70@icloud.com
+            </a>
+            <a href="https://github.com/saida199" class="c-link">
+              <span class="c-ico">⌥</span>github.com/saida199
+            </a>
+            <a href="https://fr.linkedin.com/in/saida-koci-159a14220" class="c-link">
+              <span class="c-ico">in</span>linkedin.com/in/saida-koci-159a14220
+            </a>
+            <a href="#" class="c-link">
+              <span class="c-ico">◈</span>Marseille — WIRED_NODE_13
+            </a>
+            <a href="#" class="c-link">
+              <span class="c-ico">⬡</span>Ensitech 2026/27 — Bach. Fullstack
+            </a>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="reveal d1">
+          <div class="contact-form">
+            <div class="f-group">
+              <label class="f-label">SENDER_ID <span>*</span></label>
+              <input class="f-input" type="text" placeholder="Nom de l'entreprise">
+            </div>
+            <div class="f-group">
+              <label class="f-label">SIGNAL_ADDR <span>*</span></label>
+              <input class="f-input" type="email" placeholder="recruteur@entreprise.com">
+            </div>
+            <div class="f-group">
+              <label class="f-label">PAYLOAD</label>
+              <textarea class="f-textarea" placeholder="Parle-moi de ton projet d'alternance..."></textarea>
+            </div>
+            <button class="btn" style="border:1px solid var(--crt); cursor:none; width:fit-content;">
+              TRANSMIT_&gt;
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       FOOTER
+  ═════════════════════════════════════ -->
+  <footer>
+    <span>© 2026 RYTHMA — LAYER:ALL — ENSITECH MARSEILLE</span>
+    <span class="hi">// NO MATTER WHERE YOU GO, EVERYONE IS CONNECTED</span>
+  </footer>
+
+  <!-- JavaScript (chargé en fin de body) -->
+  <script src="main.js"></script>
+
+</body>
+</html>
